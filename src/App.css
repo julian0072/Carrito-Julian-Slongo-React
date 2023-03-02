@@ -1,0 +1,30 @@
+#root {
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.material-symbols-outlined {
+  color: gray;
+  padding-top: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.numero-carrito {
+  font-size: 15px;
+  color: black;
+}
+
+.titulo-navbar {
+  color: gray;
+  padding-top: 35%;
+}
