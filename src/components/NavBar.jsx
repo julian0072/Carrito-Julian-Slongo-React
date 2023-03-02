@@ -8,13 +8,23 @@ function BasicExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">JS</Navbar.Brand>
+        <Navbar.Brand href="#home" className="ms-5">
+          JS
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#link">Test</Nav.Link>
-            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+            <Nav.Link href="#home" className="ms-5">
+              Inicio
+            </Nav.Link>
+            <Nav.Link href="#link" className="ms-5">
+              Test
+            </Nav.Link>
+            <NavDropdown
+              title="Categorias"
+              id="basic-nav-dropdown"
+              className="ms-5"
+            >
               <NavDropdown.Item href="#action/3.1">
                 Categoria 1
               </NavDropdown.Item>
