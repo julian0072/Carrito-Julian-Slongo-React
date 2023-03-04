@@ -6,10 +6,10 @@ import CartWidget from "./CartWidget";
 
 function BasicExample() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="p-4">
       <Container>
         <Navbar.Brand href="#home" className="ms-5">
-          JS
+          <h3>JS</h3>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
