@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nombre": "Camiseta1",
+    "precio": 10,
+    "imgUrl": "./img/camiseta1"
+  },
+  {
+    "id": 2,
+    "nombre": "Camiseta2",
+    "precio": 10,
+    "imgUrl": "./img/camiseta2"
+  },
+  {
+    "id": 3,
+    "nombre": "Camiseta3",
+    "precio": 10,
+    "imgUrl": "./img/camiseta3"
+  },
+  {
+    "id": 4,
+    "nombre": "Camiseta4",
+    "precio": 10,
+    "imgUrl": "./img/camiseta4"
+  },
+  {
+    "id": 5,
+    "nombre": "Campera1",
+    "precio": 10,
+    "imgUrl": "./img/campera1"
+  },
+  {
+    "id": 6,
+    "nombre": "Campera2",
+    "precio": 10,
+    "imgUrl": "./img/campera2"
+  },
+  {
+    "id": 7,
+    "nombre": "Campera3",
+    "precio": 10,
+    "imgUrl": "./img/campera3"
+  },
+  {
+    "id": 8,
+    "nombre": "Campera4",
+    "precio": 10,
+    "imgUrl": "./img/camiseta1"
+  },
+  {
+    "id": 9,
+    "nombre": "Pelota1",
+    "precio": 10,
+    "imgUrl": "./img/pelota1"
+  },
+  {
+    "id": 10,
+    "nombre": "Pelota2",
+    "precio": 10,
+    "imgUrl": "./img/pelota2"
+  }
+]
