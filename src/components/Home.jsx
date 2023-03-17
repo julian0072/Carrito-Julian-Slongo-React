@@ -4,14 +4,13 @@ function Home() {
   return (
     <>
       <div className="container-fluid p-5">
-        <h1 className="py-5 text-light">
-          Bienvenidos al Carrito del mas grande
-        </h1>
+        <h1 className="py-5 text-light">¿Listo para viciar?</h1>
 
-        <div className="py-5">
+        <div className="py-5 container-fluid">
           <img
-            src="https://cdn.conmebol.com/wp-content/uploads/2018/12/dt_2.jpg"
-            alt=""
+            className="imagen-principal"
+            src="https://articles-img.sftcdn.net/image/upload/v1582492793/videojuegos_11_call_of_duty_n8nrjf.jpg"
+            alt="Template Call of duty"
           />
         </div>
       </div>

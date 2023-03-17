@@ -5,7 +5,7 @@ const CartWidget = () => {
   return (
     <div>
       <Link to={"/cart"} className="material-symbols-outlined">
-        shopping_cart <p className="numero-carrito">0</p>
+        shopping_cart <span className="numero-carrito">0</span>
       </Link>
     </div>
   );

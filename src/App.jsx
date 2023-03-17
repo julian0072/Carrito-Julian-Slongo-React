@@ -5,6 +5,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import CartContent from "./components/CartContent";
+import ItemDetail from "./components/ItemDetail";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
+
         <Route
           exact
           path="/catalogue"

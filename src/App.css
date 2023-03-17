@@ -32,3 +32,8 @@
 .item-list-container {
   color: rgb(208, 194, 194);
 }
+
+.imagen-principal {
+  width: 70%;
+  height: 70%;
+}

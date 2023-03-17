@@ -1,62 +1,82 @@
 [
   {
     "id": 1,
-    "nombre": "Camiseta1",
+    "nombre": "Call of Duty",
     "precio": 10,
-    "imgUrl": "./img/camiseta1"
+    "cantidad": 1,
+    "categoria": "shooter",
+    "imgUrl": "https://esports.as.com/2020/08/21/call-of-duty/Todas-portadas-Call-of-Duty_1384671534_481497_1024x1453.jpg"
   },
   {
     "id": 2,
-    "nombre": "Camiseta2",
+    "nombre": "Call of Duty II",
     "precio": 10,
-    "imgUrl": "./img/camiseta2"
+    "cantidad": 2,
+    "categoria": "shooter",
+    "imgUrl": "https://esports.as.com/2020/08/21/call-of-duty/Todas-portadas-Call-of-Duty_1384671535_481515_1024x1439.jpg"
   },
   {
     "id": 3,
-    "nombre": "Camiseta3",
+    "nombre": "Black Ops",
     "precio": 10,
-    "imgUrl": "./img/camiseta3"
+    "cantidad": 1,
+    "categoria": "shooter",
+    "imgUrl": "https://esports.as.com/2020/08/21/call-of-duty/Todas-portadas-Call-of-Duty_1384671540_481605_1024x1452.jpg"
   },
   {
     "id": 4,
-    "nombre": "Camiseta4",
+    "nombre": "Call of Duty III",
     "precio": 10,
-    "imgUrl": "./img/camiseta4"
+    "cantidad": 2,
+    "categoria": "shooter",
+    "imgUrl": "http://i11b.3djuegos.com/juegos/4385/battlefield_3/fotos/ficha/battlefield_3-1729001.jpg"
   },
   {
     "id": 5,
-    "nombre": "Campera1",
+    "nombre": "Fifa 2023",
     "precio": 10,
-    "imgUrl": "./img/campera1"
+    "categoria": "Fifa",
+    "cantidad": 1,
+    "imgUrl": "https://sm.ign.com/ign_es/screenshot/default/image002-1_3te9.jpg"
   },
   {
     "id": 6,
-    "nombre": "Campera2",
+    "nombre": "Fifa 2022",
     "precio": 10,
-    "imgUrl": "./img/campera2"
+    "categoria": "Fifa",
+    "cantidad": 2,
+    "imgUrl": "https://i.blogs.es/0a2b76/e53cynvwuaix9pa/1366_2000.jpeg"
   },
   {
     "id": 7,
-    "nombre": "Campera3",
+    "nombre": "Fifa 2021",
     "precio": 10,
-    "imgUrl": "./img/campera3"
+    "categoria": "Fifa",
+    "cantidad": 1,
+    "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_660510-MLA45538403502_042021-O.jpg"
   },
   {
     "id": 8,
-    "nombre": "Campera4",
+    "nombre": "Fifa 2020",
     "precio": 10,
-    "imgUrl": "./img/camiseta1"
+    "categoria": "Fifa",
+    "cantidad": 2,
+    "imgUrl": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/950/public/media/image/2019/07/fifa-20-3.jpg?itok=pCF0EERI"
   },
   {
     "id": 9,
-    "nombre": "Pelota1",
+    "nombre": "Age of Empires II",
     "precio": 10,
-    "imgUrl": "./img/pelota1"
+    "categoria": "Estrategia",
+    "cantidad": 1,
+    "imgUrl": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/A1uc7JaNT4L._AC_UF1000,1000_QL80_.jpg"
   },
   {
     "id": 10,
-    "nombre": "Pelota2",
+    "nombre": "Civilization VI",
     "precio": 10,
-    "imgUrl": "./img/pelota2"
+    "categoria": "Estrategia",
+    "cantidad": 2,
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/en/3/3b/Civilization_VI_cover_art.jpg"
   }
 ]
