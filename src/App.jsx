@@ -20,56 +20,12 @@ function App() {
         <Route
           exact
           path="/catalogue"
-          element={
-            <ItemListContainer
-              greeting={
-                <h1 className="display-5 py-5 text-light">
-                  {" "}
-                  ¡Catalogo completo!
-                </h1>
-              }
-            />
-          }
+          element={<ItemListContainer greeting={"¡Catalogo completo!"} />}
         ></Route>
 
-        <Route
-          path="/catalogue/:categoria"
-          element={
-            <ItemListContainer
-              greeting={
-                <h1 className="display-5 py-5 text-light">
-                  {" "}
-                  ¡Catalogo Shooter!
-                </h1>
-              }
-            />
-          }
-        />
-        <Route
-          path="/catalogue/:categoria"
-          element={
-            <ItemListContainer
-              greeting={
-                <h1 className="display-5 py-5 text-light"> ¡Catalogo Fifa!</h1>
-              }
-            />
-          }
-        />
-        <Route
-          path="/catalogue/:categoria"
-          element={
-            <ItemListContainer
-              greeting={
-                <h1 className="display-5 py-5 text-light">
-                  {" "}
-                  ¡Catalogo Estrategia!
-                </h1>
-              }
-            />
-          }
-        />
+        <Route path="/catalogue/:categoria" element={<ItemListContainer />} />
 
-        <Route path="/catalogue/:id" element={<ItemDetailContainer />} />
+        <Route path="/product/:id" element={<ItemDetailContainer />} />
 
         <Route exact path="/Cart" element={<CartContent />}></Route>
       </Routes>
