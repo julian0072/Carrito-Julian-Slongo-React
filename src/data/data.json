@@ -4,7 +4,7 @@
     "nombre": "Call of Duty",
     "precio": 10,
     "cantidad": 1,
-    "categoria": "shooter",
+    "categoria": "Shooter",
     "imgUrl": "https://esports.as.com/2020/08/21/call-of-duty/Todas-portadas-Call-of-Duty_1384671534_481497_1024x1453.jpg"
   },
   {
@@ -12,7 +12,7 @@
     "nombre": "Call of Duty II",
     "precio": 10,
     "cantidad": 2,
-    "categoria": "shooter",
+    "categoria": "Shooter",
     "imgUrl": "https://esports.as.com/2020/08/21/call-of-duty/Todas-portadas-Call-of-Duty_1384671535_481515_1024x1439.jpg"
   },
   {
@@ -20,7 +20,7 @@
     "nombre": "Black Ops",
     "precio": 10,
     "cantidad": 1,
-    "categoria": "shooter",
+    "categoria": "Shooter",
     "imgUrl": "https://esports.as.com/2020/08/21/call-of-duty/Todas-portadas-Call-of-Duty_1384671540_481605_1024x1452.jpg"
   },
   {
@@ -28,7 +28,7 @@
     "nombre": "Call of Duty III",
     "precio": 10,
     "cantidad": 2,
-    "categoria": "shooter",
+    "categoria": "Shooter",
     "imgUrl": "http://i11b.3djuegos.com/juegos/4385/battlefield_3/fotos/ficha/battlefield_3-1729001.jpg"
   },
   {

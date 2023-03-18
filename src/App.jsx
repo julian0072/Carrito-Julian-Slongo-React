@@ -22,6 +22,33 @@ function App() {
           path="/catalogue"
           element={<ItemListContainer greeting={"¡Catalogo completo!"} />}
         ></Route>
+        <Route
+          path="/catalogue/shooter"
+          element={
+            <ItemListContainer
+              greeting={"¡Catálogo de Shooters!"}
+              categoria={"Shooter"}
+            />
+          }
+        />
+        <Route
+          path="/catalogue/fifa"
+          element={
+            <ItemListContainer
+              greeting={"¡Catálogo de Fifa!"}
+              categoria={"Fifa"}
+            />
+          }
+        />
+        <Route
+          path="/catalogue/estrategia"
+          element={
+            <ItemListContainer
+              greeting={"¡Catálogo de Estrategia!"}
+              categoria={"Estrategia"}
+            />
+          }
+        />
 
         <Route path="/catalogue/:id" element={<ItemDetailContainer />} />
 

@@ -3,7 +3,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function BasicExample() {
+function CartContent() {
   return (
     <>
       <h2 className="display-5 fw-bold text-light py-5">Carrito</h2>
@@ -34,4 +34,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default CartContent;

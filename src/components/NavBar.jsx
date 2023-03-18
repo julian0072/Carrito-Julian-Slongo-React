@@ -28,9 +28,15 @@ function BasicExample() {
               id="basic-nav-dropdown"
               className="ms-5"
             >
-              <NavDropdown.Item href="#action/3.1">Shooter</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Fifa</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Estrategia</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/catalogue/shooter">
+                Shooter
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/catalogue/fifa">
+                Fifa
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/catalogue/estrategia">
+                Estrategia
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <CartWidget />

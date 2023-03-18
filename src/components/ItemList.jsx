@@ -5,11 +5,15 @@ import Data from "../data/data.json";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function ItemList() {
+function ItemList({ categoria }) {
+  const filteredData = categoria
+    ? Data.filter((producto) => producto.categoria === categoria)
+    : Data;
+
   return (
     <Container className="py-5">
       <Row xs={1} sm={2} md={4} className="g-4">
-        {Data.map((producto, idx) => {
+        {filteredData.map((producto, idx) => {
           return (
             <Col key={idx}>
               <Card style={{ width: "18rem" }}>
