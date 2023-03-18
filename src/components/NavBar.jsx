@@ -28,13 +28,13 @@ function NavBar() {
               id="basic-nav-dropdown"
               className="ms-5"
             >
-              <NavDropdown.Item as={Link} to="/catalogue/shooter">
+              <NavDropdown.Item as={Link} to="/catalogue/Shooter">
                 Shooter
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/catalogue/fifa">
+              <NavDropdown.Item as={Link} to="/catalogue/Fifa">
                 Fifa
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/catalogue/estrategia">
+              <NavDropdown.Item as={Link} to="/catalogue/Estrategia">
                 Estrategia
               </NavDropdown.Item>
             </NavDropdown>
