@@ -5,7 +5,7 @@ import Data from "../data/data.json";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function ItemListContainer() {
+function ItemList() {
   return (
     <Container className="py-5">
       <Row xs={1} sm={2} md={4} className="g-4">
@@ -23,7 +23,7 @@ function ItemListContainer() {
                   </Card.Text>
                 </Card.Body>
                 <div className="d-flex justify-content-center p-3 gap-5">
-                  <Link to="/ItemDetailContainer">Detalle</Link>
+                  <Link to={`/catalogue/${producto.id}`}>Detalle</Link>
                 </div>
               </Card>
             </Col>
@@ -34,4 +34,4 @@ function ItemListContainer() {
   );
 }
 
-export default ItemListContainer;
+export default ItemList;

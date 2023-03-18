@@ -2,10 +2,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
+import ItemList from "./components/ItemList";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import CartContent from "./components/CartContent";
 import ItemDetail from "./components/ItemDetail";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           path="/catalogue"
           element={<ItemListContainer greeting={"¡Catalogo completo!"} />}
         ></Route>
+
+        <Route path="/catalogue/:id" element={<ItemDetailContainer />} />
 
         <Route exact path="/Cart" element={<CartContent />}></Route>
       </Routes>

@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       <div className="container-fluid p-5">
-        <h1 className="py-5 text-light">¿Listo para viciar?</h1>
+        <h1 className="py-5 text-light">¿Listo para jugar?</h1>
 
         <div className="py-5 container-fluid">
           <img
