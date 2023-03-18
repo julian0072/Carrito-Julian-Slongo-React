@@ -5,7 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
-function BasicExample() {
+function NavBar() {
   return (
     <Navbar bg="light" expand="lg" className="p-4">
       <Container>
@@ -46,4 +46,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default NavBar;

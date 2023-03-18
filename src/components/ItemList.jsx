@@ -22,12 +22,16 @@ function ItemList({ categoria }) {
                   <Card.Title className="py-3 fw-bold">
                     {producto.nombre}
                   </Card.Title>
-                  <Card.Text className="fw-bold py-3">
-                    Stock: {producto.cantidad}
+                  <Card.Text className="fw-bold py-1">
+                    Stock: {producto.cantidad} <br />
+                    Precio: {producto.precio}
                   </Card.Text>
                 </Card.Body>
                 <div className="d-flex justify-content-center p-3 gap-5">
-                  <Link to={`/catalogue/${producto.id}`}>Detalle</Link>
+                  <Link to={`/catalogue/${producto.id}`}>
+                    {" "}
+                    <button className="btn btn-primary">Detalle</button>
+                  </Link>
                 </div>
               </Card>
             </Col>
