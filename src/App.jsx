@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import CartContent from "./components/CartContent";
 import ItemDetail from "./components/ItemDetail";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import StateComponent from "./context/StateComponent";
 
 function App() {
   return (

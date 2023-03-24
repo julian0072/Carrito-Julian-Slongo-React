@@ -1,4 +1,4 @@
-# Carrito de compras en React
+# Carrito de compras en React para CoderHouse
 
 Este es un proyecto de carrito de compras desarrollado en React. Permite a los usuarios agregar y eliminar productos de su carrito, y ver el subtotal y el total de su compra.
 
