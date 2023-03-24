@@ -41,3 +41,7 @@ https://github.com/julian0072/React-Pre-Entrega-1-Julian-Slongo
 - ...
 
 La carpeta components contendrá los componentes de React utilizados para construir la aplicación. Cart.js y CartItem.js son los componentes encargados de manejar la lógica del carrito de compras. Product.js y ProductList.js son los componentes encargados de mostrar la lista de productos disponibles.
+
+
+![Carrito Julian Slongo gif](https://user-images.githubusercontent.com/108677837/226132729-da856098-2c4d-4ff7-bd05-a6729e7560cd.gif)
+
