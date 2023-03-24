@@ -2,24 +2,16 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { useState } from "react";
 import Data from "../data/data.json";
+import { useState } from "React";
+import { useContext } from "react";
+import { CounterContext } from "../context/StateComponent";
 
 function ItemDetailContainer(props) {
   const { id } = useParams();
   const producto = Data.find((producto) => producto.id === Number(id));
 
-  const [contador, setContador] = useState(0);
-  const sumar = () => {
-    setContador(contador + 1);
-  };
-  const restar = () => {
-    if (contador > 0) {
-      setContador(contador - 1);
-    } else {
-      alert("No puede tener menos que 0");
-    }
-  };
+  const { contador, sumar, restar, reset } = useContext(CounterContext);
 
   return (
     <>

@@ -14,23 +14,23 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      <StateComponent>
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
 
-      <Routes>
-        <Route exact path="/" element={<Home />}></Route>
+          <Route
+            exact
+            path="/catalogue"
+            element={<ItemListContainer greeting={"¡Catalogo completo!"} />}
+          ></Route>
 
-        <Route
-          exact
-          path="/catalogue"
-          element={<ItemListContainer greeting={"¡Catalogo completo!"} />}
-        ></Route>
+          <Route path="/catalogue/:categoria" element={<ItemListContainer />} />
 
-        <Route path="/catalogue/:categoria" element={<ItemListContainer />} />
+          <Route path="/product/:id" element={<ItemDetailContainer />} />
 
-        <Route path="/product/:id" element={<ItemDetailContainer />} />
-
-        <Route exact path="/Cart" element={<CartContent />}></Route>
-      </Routes>
-
+          <Route exact path="/Cart" element={<CartContent />}></Route>
+        </Routes>
+      </StateComponent>
       <Footer />
     </BrowserRouter>
   );

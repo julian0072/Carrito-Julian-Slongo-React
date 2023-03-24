@@ -3,19 +3,23 @@ import { createContext, useState } from "react";
 export const CounterContext = createContext();
 
 const StateComponent = ({ children }) => {
-  const [counter, setCounter] = useState(0);
-  const increment = () => {
-    setCounter(counter + 1);
+  const [contador, setContador] = useState(0);
+  const sumar = () => {
+    setContador(contador + 1);
   };
-  const decrement = () => {
-    setCounter(counter - 1);
+  const restar = () => {
+    if (contador > 0) {
+      setContador(contador - 1);
+    } else {
+      alert("No puede tener menos que 0");
+    }
   };
   const reset = () => {
-    setCounter(0);
+    setContador(0);
   };
 
   return (
-    <CounterContext.Provider value={{ counter, increment, decrement, reset }}>
+    <CounterContext.Provider value={{ contador, sumar, restar, reset }}>
       {children}
     </CounterContext.Provider>
   );
