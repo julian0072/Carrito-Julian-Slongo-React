@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Data from "../data/data.json";
-import { useState } from "React";
+import { useState } from "react";
 import { useContext } from "react";
 import { CounterContext } from "../context/StateComponent";
 
