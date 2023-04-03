@@ -11,6 +11,7 @@ const ItemCount = ({ id, name, price, stock }) => {
 
   const restar = () => {
     if (count < 1) {
+      Swal.fire("No puedes tener menos que 0");
     } else {
       setCount(count - 1);
     }

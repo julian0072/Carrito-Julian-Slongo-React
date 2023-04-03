@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import CartContent from "./components/CartContent";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import CartContext from "./context/CartContext";
+import LoaderComponent from "./components/LoaderComponent";
 
 function App() {
   return (
@@ -15,7 +16,11 @@ function App() {
         <NavBar />
 
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route
+            exact
+            path="/"
+            element={<LoaderComponent delay={2000} component={<Home />} />}
+          />
           <Route exact path="/catalogue" element={<ItemListContainer />} />
           <Route
             exact

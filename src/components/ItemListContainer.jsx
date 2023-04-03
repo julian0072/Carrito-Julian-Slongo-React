@@ -21,11 +21,13 @@ const ItemListContainer = ({}) => {
 
   return (
     <>
-      {Categoria ? (
-        <ItemList products={catFilter} />
-      ) : (
-        <ItemList products={products} />
-      )}
+      <div className="d-flex justify-content-center align-items-center">
+        {Categoria ? (
+          <ItemList products={catFilter} />
+        ) : (
+          <ItemList products={products} />
+        )}
+      </div>
     </>
   );
 };

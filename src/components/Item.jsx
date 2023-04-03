@@ -6,7 +6,7 @@ import { Col } from "react-bootstrap";
 
 const Item = ({ id, nombre, precio, stock, imagen, categoria }) => {
   return (
-    <div className="g-3 col-lg-4 p-5 ">
+    <div className="g-3 col-lg-6 p-5 ">
       <Col>
         <Card style={{ width: "23rem" }}>
           <Card.Img variant="top" src={imagen} />
