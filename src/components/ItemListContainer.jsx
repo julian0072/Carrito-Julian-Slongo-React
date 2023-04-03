@@ -1,53 +1,32 @@
-// import React, { useState, useEffect } from "react";
-// import ItemList from "./ItemList";
-// import Data from "../data/data.json";
-// import { useParams } from "react-router-dom";
-
-// function ItemListContainer({ greeting }) {
-//   const { categoria } = useParams();
-//   const [data, setData] = useState([]);
-
-//   useEffect(() => {
-//     const filteredData = Data.filter(
-//       (producto) => categoria === undefined || producto.categoria === categoria
-//     );
-//     setData(filteredData);
-//   }, [categoria]);
-
-//   return (
-//     <div>
-//       <h1 className="py-5 text-light">{greeting}</h1>
-//       <ItemList data={data} categoria={categoria} />
-//     </div>
-//   );
-// }
-
-// export default ItemListContainer;
-
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ItemList from "./ItemList";
-import Data from "../data/data.json";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
-function ItemListContainer({ greeting }) {
-  const { categoria } = useParams();
-  const [data, setData] = useState([]);
+const ItemListContainer = ({}) => {
+  const { Categoria } = useParams();
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const filteredData = Data.filter(
-      (producto) => categoria === undefined || producto.categoria === categoria
-    );
-    setData(filteredData);
-    // devuelve el estado al componente original después de que se haya desmontado el componente `ItemDetail`
-    return () => setData([]);
-  }, [categoria]);
+    const db = getFirestore();
+    const itemsCollection = collection(db, "juegos");
+    getDocs(itemsCollection).then((snapshot) => {
+      const docs = snapshot.docs.map((doc) => doc.data());
+      setProducts(docs);
+    });
+  }, []);
+
+  const catFilter = products.filter((prod) => prod.Categoria === Categoria);
 
   return (
-    <div>
-      <h2>{greeting}</h2>
-      <ItemList data={data} categoria={categoria} />
-    </div>
+    <>
+      {Categoria ? (
+        <ItemList products={catFilter} />
+      ) : (
+        <ItemList products={products} />
+      )}
+    </>
   );
-}
-
+};
 export default ItemListContainer;

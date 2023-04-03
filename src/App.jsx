@@ -2,37 +2,33 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
-import ItemList from "./components/ItemList";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import CartContent from "./components/CartContent";
-import ItemDetail from "./components/ItemDetail";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import StateComponent from "./context/StateComponent";
+import CartContext from "./context/CartContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <StateComponent>
-        <Routes>
-          <Route exact path="/" element={<Home />}></Route>
+    <CartContext>
+      <BrowserRouter>
+        <NavBar />
 
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/catalogue" element={<ItemListContainer />} />
           <Route
             exact
-            path="/catalogue"
-            element={<ItemListContainer greeting={"¡Catalogo completo!"} />}
-          ></Route>
-
-          <Route path="/catalogue/:categoria" element={<ItemListContainer />} />
-
-          <Route path="/product/:id" element={<ItemDetailContainer />} />
+            path="/Categoria/:Categoria"
+            element={<ItemListContainer />}
+          />
+          <Route exact path="/item/:id" element={<ItemDetailContainer />} />
 
           <Route exact path="/Cart" element={<CartContent />}></Route>
         </Routes>
-      </StateComponent>
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    </CartContext>
   );
 }
 
