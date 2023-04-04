@@ -17,8 +17,10 @@ const ItemDetail = ({ products }) => {
   return (
     <div>
       <div className="container-fluid p-5 m-5 d-flex justify-content-center align-item-center">
-        <Card className="py-5" style={{ width: "24rem" }}>
-          <Image className="image-prod" src={products.Imagen} />
+        <Card className="py-5 " style={{ width: "32rem" }}>
+          <div>
+            <Image className="image-prod" src={products.Imagen} />
+          </div>
           <br />
           <h5>{products.Nombre}</h5> <br />
           <span className="fw-bold">{products.Descripcion}</span> <br />

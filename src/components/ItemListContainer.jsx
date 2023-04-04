@@ -21,7 +21,7 @@ const ItemListContainer = ({}) => {
 
   return (
     <>
-      <div className="d-flex justify-content-center align-items-center">
+      <div className="">
         {Categoria ? (
           <ItemList products={catFilter} />
         ) : (
