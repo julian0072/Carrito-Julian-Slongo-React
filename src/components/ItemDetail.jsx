@@ -34,6 +34,7 @@ const ItemDetail = ({ products }) => {
               name={products.Nombre}
               price={products.Precio}
               stock={products.Stock}
+              Imagen={products.Imagen}
             />
           </div>
         </Card>

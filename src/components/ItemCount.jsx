@@ -5,8 +5,8 @@ import { CartContext } from "../context/CartContext";
 import Swal from "sweetalert2";
 import { Button } from "react-bootstrap";
 
-const ItemCount = ({ id, name, price, stock }) => {
-  const { cart, addToCart, setCart } = useContext(CartContext);
+const ItemCount = ({ id, name, price, stock, Imagen }) => {
+  const { cart, addToCart } = useContext(CartContext);
   const [count, setCount] = useState(0);
 
   const restar = () => {
@@ -30,6 +30,7 @@ const ItemCount = ({ id, name, price, stock }) => {
       name,
       price,
       cantidad: count,
+      Imagen,
     };
 
     addToCart(prod);
@@ -59,8 +60,7 @@ const ItemCount = ({ id, name, price, stock }) => {
           onClick={handleAddToCart}
           className="border border-dark p-2 m-2 rounded-5 b"
         >
-          {" "}
-          Agregar al carrito
+          <Link to={"/cart"}> Agregar al carrito: {count} </Link>
         </button>
       </div>
     </div>
