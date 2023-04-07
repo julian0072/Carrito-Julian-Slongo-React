@@ -22,6 +22,26 @@ const Cart = () => {
   const handleSweetAlert = () => {
     Swal.fire("Compra realizada. ¡Muchas gracias!");
   };
+  const [allFieldsCompleted, setAllFieldsCompleted] = useState(false);
+  const handleInputChange = () => {
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const email1 = document.getElementById("email1").value;
+    const email2 = document.getElementById("email2").value;
+    const telefono = document.getElementById("telefono").value;
+    const direccion = document.getElementById("direccion").value;
+
+    const allFieldsCompleted = !!(
+      nombre &&
+      apellido &&
+      email1 &&
+      email2 &&
+      telefono &&
+      direccion
+    );
+
+    setAllFieldsCompleted(allFieldsCompleted);
+  };
 
   return (
     <>
@@ -37,7 +57,7 @@ const Cart = () => {
           </span>
         ) : (
           cart.map((prod) => (
-            <div key={prod.id} className="">
+            <div key={prod.id}>
               <Card
                 className="m-2 d-flex justify-content-center   "
                 style={{ width: "20rem", height: "27rem" }}
@@ -93,25 +113,74 @@ const Cart = () => {
                   <label htmlFor="nombre" className="form-label fw-bold">
                     Nombre
                   </label>
-                  <input type="text" className="form-control" id="nombre" />
+                  <input
+                    placeholder="Ingrese su nombre"
+                    type="text"
+                    className="form-control"
+                    id="nombre"
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="apellido" className="form-label fw-bold">
                     Apellido
                   </label>
-                  <input type="text" className="form-control" id="apellido" />
+                  <input
+                    placeholder="Ingrese su apellido"
+                    type="text"
+                    className="form-control"
+                    id="apellido"
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label fw-bold">
                     Email
                   </label>
-                  <input type="email" className="form-control" id="email" />
+                  <input
+                    placeholder="Ingrese su email"
+                    type="email"
+                    className="form-control"
+                    id="email1"
+                    onChange={handleInputChange}
+                  />
+                </div>
+
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label fw-bold">
+                    Ingrese su mail de nuevo
+                  </label>
+                  <input
+                    placeholder="Ingrese su email de nuevo"
+                    type="email"
+                    className="form-control"
+                    id="email2"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="telefono" className="form-label fw-bold">
+                    Telefono
+                  </label>
+                  <input
+                    placeholder="Ingrese su telefono"
+                    type="telefono"
+                    className="form-control"
+                    id="telefono"
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="direccion" className="form-label fw-bold">
                     Dirección
                   </label>
-                  <input type="text" className="form-control" id="direccion" />
+                  <input
+                    placeholder="Ingrese su dirección"
+                    type="text"
+                    className="form-control"
+                    id="direccion"
+                    onChange={handleInputChange}
+                  />
                 </div>
               </form>
             </Modal.Body>
@@ -119,17 +188,16 @@ const Cart = () => {
               <h4>Total: ${total}</h4>
 
               <Button
-                variant="primary"
                 onClick={() => {
                   handleCloseModal();
                   handleSweetAlert();
+                  nullCart();
                 }}
+                disabled={!allFieldsCompleted}
               >
                 Enviar
               </Button>
-              <Button variant="secondary" onClick={handleCloseModal}>
-                Cerrar
-              </Button>
+              <Button onClick={handleCloseModal}>Cerrar</Button>
             </Modal.Footer>
           </Modal>
         </div>

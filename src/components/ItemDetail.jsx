@@ -1,12 +1,14 @@
-import React from "react";
 import { Image } from "react-bootstrap";
 
 import { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import ItemCount from "./ItemCount";
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({ products }) => {
   const [loading, setLoading] = useState(false);
+  const { addToCart, cart, setCartCount } = useContext(CartContext);
 
   useEffect(() => {
     setTimeout(() => {
