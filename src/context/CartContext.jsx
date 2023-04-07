@@ -34,6 +34,7 @@ const CartProvider = ({ children }) => {
 
   const nullCart = () => {
     setCart([]);
+    setCartCount(0);
   };
   const totalCart = () => {
     return cart.reduce((total, prod) => total + prod.price * prod.cantidad, 0);
