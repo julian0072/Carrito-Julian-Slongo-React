@@ -10,6 +10,8 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 const Cart = () => {
+  const [emailsDiferentes, setEmailsDiferentes] = useState(false);
+
   const { cart, removeItem, nullCart, totalCart, setCart } =
     useContext(CartContext);
   const { id } = useParams();
@@ -41,6 +43,11 @@ const Cart = () => {
     );
 
     setAllFieldsCompleted(allFieldsCompleted);
+    if (email1 !== email2) {
+      setEmailsDiferentes(true);
+    } else {
+      setEmailsDiferentes(false);
+    }
   };
 
   return (
@@ -57,7 +64,7 @@ const Cart = () => {
           </span>
         ) : (
           cart.map((prod) => (
-            <div key={prod.id}>
+            <div key={prod.id} className="">
               <Card
                 className="m-2 d-flex justify-content-center   "
                 style={{ width: "20rem", height: "27rem" }}
@@ -140,7 +147,9 @@ const Cart = () => {
                   <input
                     placeholder="Ingrese su email"
                     type="email"
-                    className="form-control"
+                    className={`form-control ${
+                      emailsDiferentes ? "is-invalid" : ""
+                    }`}
                     id="email1"
                     onChange={handleInputChange}
                   />
@@ -151,12 +160,19 @@ const Cart = () => {
                     Ingrese su mail de nuevo
                   </label>
                   <input
-                    placeholder="Ingrese su email de nuevo"
+                    placeholder="Confirme su email"
                     type="email"
-                    className="form-control"
+                    className={`form-control ${
+                      emailsDiferentes ? "is-invalid" : ""
+                    }`}
                     id="email2"
                     onChange={handleInputChange}
                   />
+                  {emailsDiferentes && (
+                    <span className="invalid-feedback d-block">
+                      Los mails no coinciden
+                    </span>
+                  )}
                 </div>
                 <div className="mb-3">
                   <label htmlFor="telefono" className="form-label fw-bold">
@@ -193,7 +209,7 @@ const Cart = () => {
                   handleSweetAlert();
                   nullCart();
                 }}
-                disabled={!allFieldsCompleted}
+                disabled={!allFieldsCompleted || emailsDiferentes}
               >
                 Enviar
               </Button>
