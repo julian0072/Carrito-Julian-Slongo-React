@@ -58,7 +58,7 @@ const ItemCount = ({ id, name, price, stock, Imagen }) => {
       <div>
         <button
           onClick={handleAddToCart}
-          className="border border-dark p-2 m-2 rounded-5 b"
+          className="border border-dark p-2 m-2 rounded-5 "
         >
           <Link to={"/cart"}> Agregar al carrito: {count} </Link>
         </button>

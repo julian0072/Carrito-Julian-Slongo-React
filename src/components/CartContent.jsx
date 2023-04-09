@@ -2,15 +2,55 @@ import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { useParams } from "react-router-dom";
-import { Button, Card, Container } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { collection, addDoc, getFirestore } from "firebase/firestore";
 
 const Cart = () => {
   const [emailsDiferentes, setEmailsDiferentes] = useState(false);
+  const [formData, setFormData] = useState({
+    nombre: "",
+    apellido: "",
+    email1: "",
+    email2: "",
+    telefono: "",
+    direccion: "",
+  });
+
+  const enviarFormulario = async () => {
+    try {
+      const db = getFirestore();
+      const ordenesRef = collection(db, "Ordenes");
+      const docRef = await addDoc(ordenesRef, formData);
+      const newId = docRef.id;
+      nullCart();
+      handleCloseModal();
+      setFormData({
+        nombre: "",
+        apellido: "",
+        email1: "",
+        email2: "",
+        telefono: "",
+        direccion: "",
+      });
+      handleSweetAlert(newId);
+    } catch (error) {
+      <span>Error</span>;
+    }
+  };
+
+  const handleSweetAlert = (newId) => {
+    if (newId) {
+      Swal.fire({
+        title: "Compra realizada. ¡Muchas gracias!",
+        text: "El id de su compra es: " + newId,
+      });
+    }
+  };
 
   const { cart, removeItem, nullCart, totalCart, setCart } =
     useContext(CartContext);
@@ -21,10 +61,9 @@ const Cart = () => {
   const handleCloseModal = () => {
     setShowModal(false);
   };
-  const handleSweetAlert = () => {
-    Swal.fire("Compra realizada. ¡Muchas gracias!");
-  };
+
   const [allFieldsCompleted, setAllFieldsCompleted] = useState(false);
+
   const handleInputChange = () => {
     const nombre = document.getElementById("nombre").value;
     const apellido = document.getElementById("apellido").value;
@@ -107,7 +146,6 @@ const Cart = () => {
               </div>
             </div>
           </div>
-
           <Modal show={showModal} onHide={handleCloseModal}>
             <Modal.Header closeButton>
               <Modal.Title>
@@ -208,6 +246,7 @@ const Cart = () => {
                   handleCloseModal();
                   handleSweetAlert();
                   nullCart();
+                  enviarFormulario();
                 }}
                 disabled={!allFieldsCompleted || emailsDiferentes}
               >
