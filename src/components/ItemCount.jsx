@@ -39,28 +39,25 @@ const ItemCount = ({ id, name, price, stock, Imagen }) => {
   return (
     <div>
       <div>
-        <Button
-          className="border border-dark p-2 m-3 rounded-4 "
-          onClick={restar}
-        >
+        <Button className="  boton-container" onClick={restar}>
           -
         </Button>
 
-        <span>{count}</span>
+        <span className="span-boton fw-bold">{count}</span>
 
-        <Button
-          className="border border-dark p-2 m-3 rounded-4 "
-          onClick={sumar}
-        >
+        <Button className="  boton-container " onClick={sumar}>
           +
         </Button>
       </div>
       <div>
         <button
           onClick={handleAddToCart}
-          className="border border-dark p-2 m-2 rounded-5 "
+          className="fw-bold border border-dark boton-agregar p-3"
         >
-          <Link to={"/cart"}> Agregar al carrito: {count} </Link>
+          <Link className=" boton-agregar p-3" to={"/cart"}>
+            {" "}
+            Agregar al carrito: {count}{" "}
+          </Link>
         </button>
       </div>
     </div>

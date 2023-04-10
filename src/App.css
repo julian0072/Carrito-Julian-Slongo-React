@@ -69,3 +69,21 @@ img {
   width: 200px;
   height: 200px;
 }
+
+.boton-container {
+  color: black;
+  background-color: white;
+  border-color: black;
+  margin: 20px;
+}
+.span-boton {
+  font-size: 25px;
+}
+
+.boton-agregar {
+  color: black;
+}
+
+.boton-detalle {
+  border-color: black;
+}

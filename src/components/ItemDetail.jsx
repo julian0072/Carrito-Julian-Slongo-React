@@ -26,10 +26,10 @@ const ItemDetail = ({ products }) => {
           <br />
           <h5>{products.Nombre}</h5> <br />
           <span className="fw-bold">{products.Descripcion}</span> <br />
-          <h6>Categoria: {products.Categoria} </h6>
+          <h6 className="fw-bold">Categoria: {products.Categoria} </h6>
           <br />
-          <h6>Stock: {products.Stock}</h6> <br />
-          <h6>Price: ${products.Precio}</h6> <br />
+          <h6 className="fw-bold">Stock: {products.Stock}</h6> <br />
+          <h6 className="fw-bold">Price: ${products.Precio}</h6> <br />
           <div className="d-flex justify-content-center">
             <ItemCount
               id={products.id}

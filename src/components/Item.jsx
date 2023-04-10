@@ -20,7 +20,7 @@ const Item = ({ id, nombre, precio, stock, imagen, categoria }) => {
           </Card.Body>
           <div className="d-flex justify-content-center p-3 gap-5">
             <Link to={`/item/${id}`}>
-              <button className="btn btn-primary">Detalle</button>
+              <button className=" boton-detalle fw-bold">Detalle</button>
             </Link>
           </div>
         </Card>
