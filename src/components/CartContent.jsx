@@ -109,7 +109,7 @@ const Cart = () => {
                 style={{ width: "20rem", height: "27rem" }}
               >
                 <div>
-                  <Image src={prod.Imagen} className="img-carrito" />
+                  <Image src={prod.Imagen} className="img-carrito pb-2" />
                   <h6 className="fw-bold py-1">{prod.name}</h6>
                   <h6 className="fw-bold ">Cantidad: {prod.cantidad}</h6>
                   <h6 className="fw-bold ">Precio c/u: ${prod.price}</h6>
@@ -118,7 +118,7 @@ const Cart = () => {
                   </h6>
                   <Button
                     onClick={() => removeItem(prod.id)}
-                    className="p-2 my-2"
+                    className="p-2 my-2 btn btn-danger "
                   >
                     Eliminar producto
                   </Button>
@@ -133,14 +133,17 @@ const Cart = () => {
           <div className="container-fluid pb-5">
             <div className="d-flex justify-content-center flex-column">
               <div className="my-3 text-center d-flex justify-content-center p-2">
-                <h3 className="fw-bold text-white mb-2 display-5">Total:</h3>
-                <h3 className="fw-bold text-white display-5">${total}</h3>
+                <h3 className=" text-white mb-2 display-5">Total:</h3>
+                <h3 className=" text-white display-5">${total}</h3>
               </div>
-              <div>
+              <div className="pb-5">
                 <Button className="m-3 p-3" onClick={() => setShowModal(true)}>
                   Finalizar compra
                 </Button>
-                <Button className="m-3 p-3" onClick={() => nullCart()}>
+                <Button
+                  className="m-3 p-3 btn-danger"
+                  onClick={() => nullCart()}
+                >
                   Vaciar carrito
                 </Button>
               </div>
