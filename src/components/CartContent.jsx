@@ -93,14 +93,16 @@ const Cart = () => {
     <>
       <div className="d-flex justify-content-center py-5 my-5">
         {cart <= 0 ? (
-          <span className="py-5 my-5 ">
-            <h2 className="text-white fw-bold">El carrito esta vacio</h2>
-            <Link to={"/catalogue"}>
-              <button className="btn btn-secondary my-5 py-3">
-                Lista de productos
-              </button>
-            </Link>
-          </span>
+          <div className="py-5 my-5">
+            <span className="py-5 my-5 span-carrito">
+              <h2 className="text-white fw-bold">El carrito esta vacio</h2>
+              <Link to={"/catalogue"}>
+                <button className="btn btn-secondary my-5 py-3">
+                  Lista de productos
+                </button>
+              </Link>
+            </span>
+          </div>
         ) : (
           cart.map((prod) => (
             <div key={prod.id} className="">
